@@ -10,7 +10,8 @@ class CalculatorTest {
 
   companion object {
 
-    @JvmStatic
+    // @JvmStatic 있음 : public static final void beforeAll() { Companion.beforeAll(); }, beforeAll 정적 메소드 생성해 줌
+    // @JvmStatic 없음 : Companion.beforeAll(), beforeAll 정적 메소드 미생성 -> Companion 객체 통해 메소드 호출
     @BeforeAll
     fun beforeAll() {
       println("모든 테스트 시작 전")
